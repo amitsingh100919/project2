@@ -1,0 +1,6 @@
+app.service('regService',function($scope,$http){
+	
+	$scope.register=function(){
+		$http.post();
+	}
+});

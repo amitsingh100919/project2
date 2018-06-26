@@ -1,0 +1,6 @@
+app.service('regService',function($scope,$http){
+	var base_url="http://localhost:8022/collabrationMiddle/"
+	$scope.register=function(){
+		$http.post();
+	}
+});

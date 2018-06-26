@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Tue Jun 26 07:21:36 IST 2018
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\This\ pc\\.m2\\repository\\org\\springframework\\spring-web\\4.3.5.RELEASE\\spring-web-4.3.5.RELEASE.jar=WEB-INF/lib/spring-web-4.3.5.RELEASE.jar
+org.eclipse.jst.j2ee.server\:collabrationBackend=WEB-INF/lib/collabrationBackend-0.0.1-SNAPSHOT.jar

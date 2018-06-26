@@ -1,0 +1,10 @@
+package com.collabrationBackend.config;
+
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan("com.collabrationBackend")
+public class DBConfig {
+
+}

@@ -1,0 +1,46 @@
+package com.collabrationMiddle.RestConroller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.collabrationBackend.DAO.ForumDAO;
+import com.collabrationBackend.model.Forum;
+
+@RestController
+public class ForumController {
+	
+	@Autowired
+	ForumDAO forumDAO;
+	@GetMapping("/getAllForum")
+	public ResponseEntity<?> getAllForum(){
+		List<Forum> forumList = forumDAO.getForumList();
+		if(forumList==null) {
+			return new ResponseEntity<String>("There is no forum added",HttpStatus.NOT_FOUND);
+		}
+		else {
+			return new ResponseEntity<List<Forum>>(forumList,HttpStatus.OK);
+		}
+	}
+	@PostMapping("/createForum")
+	public ResponseEntity<?> createForum(@RequestBody Forum forum){
+		System.out.println("Create forum");
+		if(forumDAO.createForum(forum)) {
+			return new ResponseEntity<String>("Forum added successfully",HttpStatus.OK);
+		}
+		else {
+			return new ResponseEntity<String>("Forum not added",HttpStatus.NOT_FOUND);
+		}
+	}
+	@PostMapping("/updateForum")
+	public ResponseEntity<?> updateForum(@PathVariable("forumId") int forumId,@RequestBody Forum forum){
+		
+	}
+}

@@ -1,0 +1,13 @@
+com\collabrationBackend\model\Forum.class
+com\collabrationBackend\DAO\IMPL\JobDAOImpl.class
+com\collabrationBackend\DAO\IMPL\BlogDAOImpl.class
+com\collabrationBackend\model\Blog.class
+com\collabrationBackend\model\Job.class
+com\collabrationBackend\DAO\BlogDAO.class
+com\collabrationBackend\model\User.class
+com\collabrationBackend\DAO\IMPL\ForumDAOImpl.class
+com\collabrationBackend\DAO\JobDAO.class
+com\collabrationBackend\DAO\ForumDAO.class
+com\collabrationBackend\DAO\IMPL\UserDAOImpl.class
+com\collabrationBackend\config\DBConfig.class
+com\collabrationBackend\DAO\UserDAO.class
